@@ -2,7 +2,7 @@ import sbt._
 import Keys._
 
 object MinimalBuild extends Build {
-  
+
   lazy val buildVersion =  "2.0.1"
   
   lazy val typesafe = "Typesafe Repository" at "http://repo.typesafe.com/typesafe/releases/"
