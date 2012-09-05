@@ -6,6 +6,7 @@ import akka.util.duration._
 import akka.actor.ActorRef
 import play.api.mvc._
 import play.api.libs.concurrent._
+import play.api.libs.concurrent.execution.defaultContext
 /**
  *
  * Provides syntatic sugar for mapping an ActorRef's ask call result onto an AsyncResult
