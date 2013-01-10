@@ -40,6 +40,8 @@ trait Application {
  */
 class Setup(a: Application) extends GlobalSettings {
   
+  println("...Please note, 2.1 will be the last release of play-mini")
+
   private lazy val dispatch: PartialFunction[RequestHeader, Handler] = {
     val cl = Thread.currentThread().getContextClassLoader()
     try {
@@ -81,7 +83,7 @@ class SetupJavaApplicationFor[T <: play.mvc.Controller](implicit m: Manifest[T])
   import collection.JavaConverters._
   import play.mvc.Http.{ Context => JContext, Request => JRequest }
 
-  
+  println("...Please note, 2.1 will be the last release of play-mini")
 
 
   private def setupRoutes(path: String) : Option[Handler] = {
