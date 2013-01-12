@@ -102,12 +102,12 @@ G8 Project templates
 
  java::
 
-  g8 pk11/play-mini-java.g8
+  g8 typesafehub/play-mini-java.g8
 
 
  scala::
 
-  g8 pk11/play-mini-scala.g8
+  g8 typesafehub/play-mini-scala.g8
 
 
 
