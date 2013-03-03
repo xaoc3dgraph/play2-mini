@@ -1,17 +1,17 @@
 Play2 Mini Project
 ==================
 
-Play2 Mini Project provides REST API on top of `Play2 <https://github.com/playframework/Play20>`_
+Play2 Mini Project provides REST API on top of [Play2](https://github.com/playframework/Play20)
 
 Scala
 -----
 
-In the global package name space::
-
+In the global package name space:
+```scala
   object Global extends com.typesafe.play.mini.Setup(com.example.App)
-
-and then in your own package::
-
+```
+and then in your own package:
+```scala
   object App extends com.typesafe.play.mini.Application {
      def route  =  {
         case GET(Path("/coco")) & QueryString(qs) =>  Action{
@@ -23,11 +23,11 @@ and then in your own package::
         }
       }
   }
+```
+The API is based on the always awesome [Unfiltered](http://unfiltered.databinder.net/Unfiltered.html) library.
 
-The API is based on the always awesome `Unfiltered <http://unfiltered.databinder.net/Unfiltered.html>`_ library.
-
-Extending the Extractor based approach with regex or simple matching is possible too::
-
+Extending the Extractor based approach with regex or simple matching is possible too:
+```scala
   object App extends com.typesafe.play.mini.Application {
     def route = Routes(
       Through("/people/(.*)".r) {groups: List[String] =>
@@ -56,22 +56,23 @@ Extending the Extractor based approach with regex or simple matching is possible
     )   
   }
 
-for more information about extractors, regex and Routes, please `see <https://github.com/typesafehub/play2-mini/tree/master/src/main/scala/com/typesafe/play/mini>`_
+```
+for more information about extractors, regex and Routes, please [see](https://github.com/typesafehub/play2-mini/tree/master/src/main/scala/com/typesafe/play/mini)
 
-Other than this, there are many useful utilities available at your fingertip, take a look at the official guide of `Play for Scala Developers <https://github.com/playframework/Play20/wiki/ScalaHome>`_
-
+Other than this, there are many useful utilities available at your fingertip, take a look at the official guide of [Play for Scala Developers](https://github.com/playframework/Play20/wiki/ScalaHome)
 
 
 Java
 ----
 
-In the global package name space::
+In the global package name space:
+```java
 
   //Global.scala
   object Global extends com.typesafe.play.mini.SetupJavaApplicationFor[com.example.App]
-
-and then in your own package::
-
+```
+and then in your own package:
+```java
   //com/example/App.java
   package com.example;
 
@@ -87,9 +88,9 @@ and then in your own package::
         return ok("It works:"+ foo +" "+name);
    }
  }
-
-Other than this, there are many useful utilities available at your fingertip, take a look at `Play Java Utils <https://github.com/playframework/Play20/tree/master/framework/src/play/src/main/java/play/libs>`_ 
-and `Async processing with Play <https://github.com/playframework/Play20/wiki/JavaAsync>`_
+```
+Other than this, there are many useful utilities available at your fingertip, take a look at [Play Java Utils](https://github.com/playframework/Play20/tree/master/framework/src/play/src/main/java/play/libs)
+and [Async processing with Play](https://github.com/playframework/Play20/wiki/JavaAsync)
 
 
 See sample apps for more examples.
@@ -97,24 +98,24 @@ See sample apps for more examples.
 G8 Project templates
 --------------------
 
-`G8 <https://github.com/n8han/giter8>`_ project templates are available as well.
+[G8](https://github.com/n8han/giter8) project templates are available as well.
 
 
- java::
-
+ java:
+```bash
   g8 typesafehub/play-mini-java.g8
+```
 
-
- scala::
-
+ scala:
+```bash
   g8 typesafehub/play-mini-scala.g8
-
+```
 
 
 Licence
 -------
 
-The code is licensed under Apache 2 license::
+The code is licensed under Apache 2 license:
 
   This software is licensed under the Apache 2 license, quoted below.
 
